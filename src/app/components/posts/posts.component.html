@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-2 offset-md-10">
+        <mat-slide-toggle>Newer to older</mat-slide-toggle>
+    </div>
+</div>
+<div class="row row-0-padding">
+    <div class="col-md-6" *ngFor="let post of postArray">
+        <mat-card class="margin-top">
+            <mat-card-header>
+              <mat-card-title>{{ post.title }}</mat-card-title>
+              <mat-card-subtitle>{{ post.author.Firstname }} {{ post.author.LastName }} - {{ post.date }} </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{ post.postImage }}" alt="" class="card-img-top">
+            <mat-card-content>
+              <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, cupiditate expedita. Deserunt, corrupti tempore. Ad qui, vitae error voluptate libero est quos, impedit, totam velit quod exercitationem. Illum, facilis amet!
+              </p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+</div>
