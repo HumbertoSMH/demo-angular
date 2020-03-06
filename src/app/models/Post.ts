@@ -1,9 +1,10 @@
 import { PostBodyModel } from './PostBody';
 import { AuthorModel } from './Author';
+import { CategoryModel } from './Category';
 
 export class PostModel {
     constructor( id: number, authorId: number, title: string,  date: Date, categoryId: number, postImage: string
-               , postbody: PostBodyModel, author: AuthorModel) {
+               , postbody: PostBodyModel[], author: AuthorModel, category: CategoryModel) {
         this.id = id;
         this.authorId = authorId;
         this.title = title;
@@ -12,6 +13,7 @@ export class PostModel {
         this.postImage = postImage;
         this.postbody = postbody;
         this.author = author;
+        this.category = category;
     }
 
     id: number;
@@ -20,6 +22,7 @@ export class PostModel {
     date: Date;
     categoryId: number;
     postImage: string;
-    postbody: PostBodyModel;
+    postbody: PostBodyModel[];
     author: AuthorModel;
+    category: CategoryModel;
 }

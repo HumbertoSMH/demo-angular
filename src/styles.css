@@ -2,4 +2,37 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .main-layout { position: absolute;top: 0;bottom: 0;left: 0;right: 0; height: 100%;}
 .row-0-padding {margin:15px 0; }
-.margin-top { margin-top: 15px; }
+.margin-top { margin-top: 15px; } 
+.author-profile{
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.author-profile-img {
+    height: 50px;
+    margin-right: 50px;
+    align-self: center;
+    margin: -11px 20px;
+}
+.author-profile-img img{
+    height: 50px;
+    border-radius: 100%;
+    margin-top: -6.5px;
+}
+
+.author-profile-info-name {
+    font-size: 14px;
+    margin-bottom:0 !important;
+    color: #ababab;
+}
+.author-profile-info-email{
+    font-size: 11px;
+    margin-bottom: 0 !important;
+    color: #848282;
+}
+
+.author-profile-info-link{
+    font-size: 12px;
+    margin-bottom: 0 !important;
+}

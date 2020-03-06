@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostsComponent } from './components/posts/posts.component';
+import { PostComponent } from './components/post/post.component';
 
 
 const routes: Routes = [
-  { path: 'post', component: PostsComponent},
+  { path: 'posts', component: PostsComponent},
+  { path: 'author/:id/posts', component: PostComponent},
+  { path: 'post/:id', component: PostComponent}, 
   { path: ''    , component: PostsComponent }
 ];
 

@@ -1,23 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule} from '@angular/common/http';
+
+/*Components Imports*/
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { PostsComponent } from './components/posts/posts.component';
 
+/*Angular Material Imports */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule  } from '@angular/material/button';
 import { MatCardModule    } from '@angular/material/card';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatChipsModule } from '@angular/material/chips';
+
+/*Services Imports*/
+import { PostService } from '../app/services/post.service';
+import { PostComponent } from './components/post/post.component';
+import { AuthorComponent } from './components/author/author.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PostsComponent
+    PostsComponent,
+    PostComponent,
+    AuthorComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +38,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatChipsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
