@@ -1,5 +1,8 @@
 <mat-drawer-container class="main-layout">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+  <mat-drawer mode="side" opened class="sidenav">
+    <app-author></app-author>
+    <app-categories></app-categories>
+  </mat-drawer>
   <mat-drawer-content>
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>

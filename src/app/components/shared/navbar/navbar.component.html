@@ -1,9 +1,10 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="toolbar-color">
     <mat-toolbar-row>
           <h1>DemoPost</h1>
           <span class="menu-spacer"></span>
-          <div>
-            <a mat-button [routerLink]="['posts']"> Accounts </a>
+          <div class="toolbar-link-container"> 
+            <a class="toolbar-link" [routerLink]="['posts']"  [routerLinkActive]="['toolbar-link-active']"> All Post </a>
+            <a class="toolbar-link" [routerLink]="['/authors']"  routerLinkActive="toolbar-link-active"> Authors </a>
           </div>
     </mat-toolbar-row>
   </mat-toolbar>

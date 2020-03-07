@@ -16,11 +16,15 @@ import { MatButtonModule  } from '@angular/material/button';
 import { MatCardModule    } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatListModule } from '@angular/material/list';
 
 /*Services Imports*/
 import { PostService } from '../app/services/post.service';
 import { PostComponent } from './components/post/post.component';
 import { AuthorComponent } from './components/author/author.component';
+import { PageNotFoundComponent } from './components/shared/pagenotfound/pagenotfound.component';
+import { PostByAuthorComponent } from './components/post-by-author/post-by-author.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { AuthorComponent } from './components/author/author.component';
     NavbarComponent,
     PostsComponent,
     PostComponent,
-    AuthorComponent
+    AuthorComponent,
+    PageNotFoundComponent,
+    PostByAuthorComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,7 @@ import { AuthorComponent } from './components/author/author.component';
     MatCardModule,
     MatSlideToggleModule,
     MatChipsModule,
+    MatListModule,
     HttpClientModule
   ],
   providers: [

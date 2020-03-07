@@ -1,0 +1,8 @@
+<div class="sidenav-title">
+    Categories
+</div>
+<div *ngFor="let category of categoryArray" class="author-item">
+   <a  [routerLink]="['/category', category.id, 'posts']" >
+     {{ category.Name }}  
+   </a>
+</div>

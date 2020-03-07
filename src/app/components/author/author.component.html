@@ -1,1 +1,9 @@
-<p>author works!</p>
+    <div class="sidenav-title">
+        Authors
+    </div>
+    <div *ngFor="let author of authorArray" class="author-item">
+       <a  [routerLink]="['/author', author.id, 'posts']" >
+        <img [src]="author.Avatar"  [alt]="author.FirstName" class="author-item-img">
+         {{author.FirstName }} {{ author.LastName }} 
+       </a>
+    </div>

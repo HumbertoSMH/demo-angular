@@ -1,1 +1,40 @@
-<p>post works!</p>
+<div class="row row-0-padding" *ngIf="Post">
+    <div class="col-md-8 offset-2">
+        <mat-card class="margin-top">
+            <mat-card-header>
+              <mat-card-title>{{ Post.Title }}</mat-card-title>
+              <mat-card-subtitle>{{ Post.date }} </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{ Post.postImg }}" alt="" class="card-img-top">
+            <mat-card-content>
+              <p *ngFor="let body of Post.postbody">
+                {{ body.text}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <div class="author-profile">
+                  <div class="author-profile-img">
+                      <img [src]="Post.author.Avatar" [title]="Post.author.FirstName"/>
+                  </div>
+                  <div class="author-profile-info">
+                      <p class="author-profile-info-name">{{ Post.author.FirstName }} {{ Post.author.LastName }}</p>
+                      <p class="author-profile-info-email">{{ Post.author.Email }}</p>
+                      <p>
+                        <a [routerLink]="['/post', Post.author.id]" class="author-profile-info-link">View all post</a>
+                      </p>
+                  </div>
+              </div>
+              <mat-chip-list>
+                <mat-chip color="primary" class="pull-right">
+                  <a [routerLink]="['/category', Post.category.id]">{{ Post.category.Name  }}</a>
+                </mat-chip>
+              </mat-chip-list>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+</div>
+<div class="row row-0-padding text-center">
+    <div class="col-4 offset-4">
+        <a [routerLink]="['/posts']">Return to all post</a>   
+    </div>
+</div>
