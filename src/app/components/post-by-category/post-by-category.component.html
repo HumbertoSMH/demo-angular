@@ -1,9 +1,4 @@
 <div class="row row-0-padding">
-    <div class="col-2 offset-10">
-        <mat-slide-toggle (click)="changeOrder()">Older first</mat-slide-toggle>
-    </div>
-</div>
-<div class="row row-0-padding">
     <div class="col-md-4" *ngFor="let post of postArray">
         <mat-card class="margin-top">
             <mat-card-header>
@@ -13,9 +8,9 @@
             <img mat-card-image src="{{ post.postImg }}" alt="" class="card-img-top">
             <mat-card-content>
               <p *ngFor="let body of post.postbody">
-                {{ body.text | slice:0:150}}  <a class="post-read-more" [routerLink]="['/post', post.id]">Read more ...</a>
+                {{ body.text}}
               </p>
-              
+              <a class="post-read-more" [routerLink]="['/post', post.id]">Read more ...</a> 
             </mat-card-content>
             <mat-card-actions>
               <div class="author-profile">
@@ -26,26 +21,16 @@
                       <p class="author-profile-info-name">{{ post.author.FirstName }} {{ post.author.LastName }}</p>
                       <p class="author-profile-info-email">{{ post.author.Email }}</p>
                       <p>
-                        <a [routerLink]="['/author', post.author.id, 'posts']" class="author-profile-info-link">View all post</a>
+                        <a [routerLink]="['/post', post.author.id]" class="author-profile-info-link">View all post</a>
                       </p>
                   </div>
               </div>
               <mat-chip-list>
                 <mat-chip color="primary" class="pull-right">
-                  <a [routerLink]="['/category', post.category.id, 'posts']">{{ post.category.Name  }}</a>
+                  <a [routerLink]="['/category', post.category.id]">{{ post.category.Name  }}</a>
                 </mat-chip>
               </mat-chip-list>
             </mat-card-actions>
           </mat-card>
     </div>
 </div>
-<div class="row row-0-padding">
-  <div class="col-4 offset-4">
-    <ul class="paginator-container">
-      <li *ngFor="let i of numberOfPages;" class="paginator-page" >
-        <a (click)="loadPageNumber(i)" class="paginator-page-link">{{ i }}</a> 
-      </li>
-    </ul>
-  </div>
-</div>
-

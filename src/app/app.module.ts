@@ -25,6 +25,7 @@ import { AuthorComponent } from './components/author/author.component';
 import { PageNotFoundComponent } from './components/shared/pagenotfound/pagenotfound.component';
 import { PostByAuthorComponent } from './components/post-by-author/post-by-author.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { PostByCategoryComponent } from './components/post-by-category/post-by-category.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     AuthorComponent,
     PageNotFoundComponent,
     PostByAuthorComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    PostByCategoryComponent
   ],
   imports: [
     BrowserModule,

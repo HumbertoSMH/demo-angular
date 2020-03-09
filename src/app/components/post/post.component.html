@@ -20,13 +20,13 @@
                       <p class="author-profile-info-name">{{ Post.author.FirstName }} {{ Post.author.LastName }}</p>
                       <p class="author-profile-info-email">{{ Post.author.Email }}</p>
                       <p>
-                        <a [routerLink]="['/post', Post.author.id]" class="author-profile-info-link">View all post</a>
+                        <a [routerLink]="['/author', Post.author.id, 'posts']" class="author-profile-info-link">View all post</a>
                       </p>
                   </div>
               </div>
               <mat-chip-list>
                 <mat-chip color="primary" class="pull-right">
-                  <a [routerLink]="['/category', Post.category.id]">{{ Post.category.Name  }}</a>
+                  <a [routerLink]="['/category', Post.category.id, 'posts']">{{ Post.category.Name  }}</a>
                 </mat-chip>
               </mat-chip-list>
             </mat-card-actions>
