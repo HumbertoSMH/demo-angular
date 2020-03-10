@@ -1,5 +1,5 @@
 # demo-angular
-Demo for interview
+Demo for Front-End Interview
 
 ## To run this proyect 
 - First clone this repository in your local machine 
@@ -8,7 +8,7 @@ Demo for interview
     ```
 - Install json-server and angular CLI (if you have already installed angular cli and json-server ignore this step)
     ```
-    npm intall -g json-server 
+    npm install -g json-server 
     npm install -g @angular/cli
     ```
 - Install project's dependencies
