@@ -8,7 +8,7 @@
             <img mat-card-image src="{{ post.postImg }}" alt="" class="card-img-top">
             <mat-card-content>
               <p *ngFor="let body of post.postbody">
-                {{ body.text}}
+                {{ body.text | slice:0:150}}
               </p>
               <a class="post-read-more" [routerLink]="['/post', post.id]">Read more ...</a> 
             </mat-card-content>
